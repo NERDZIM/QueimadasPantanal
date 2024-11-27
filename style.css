@@ -1,0 +1,207 @@
+/* RESET DE ESTILOS BÁSICOS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* GERENCIANDO O CORPO DA PÁGINA */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* CABEÇALHO COM LOGO */
+header {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Altura ajustada para a logo ficar mais visível */
+    background-color: #212121; /* Cor escura de fundo */
+    text-align: center;
+    padding-top: 20px; /* Dá um espaço entre a parte superior e a logo */
+}
+
+header .logo img {
+    width: 300px; /* Define um tamanho fixo para a logo */
+    height: auto;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+header nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente para a navegação */
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* SEÇÃO COMO AJUDAR */
+.info-section {
+    background-image: url('ajuda.webp'); /* Coloca a imagem de fundo da seção */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px; /* Ajusta o padding para dar mais espaço */
+    color: white;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Texto mais legível sobre fundo */
+}
+
+.info-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Texto legível */
+}
+
+/* SEÇÃO PRINCIPAL */
+main {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+/* CARDS */
+.cards-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cards-section h1 {
+    color: #212121;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #666;
+    margin: 15px 0;
+}
+
+.saiba-mais {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #212121;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.saiba-mais:hover {
+    background-color: #333;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #212121;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards-section h1 {
+        font-size: 26px;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-section h1 {
+        font-size: 24px;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+}
